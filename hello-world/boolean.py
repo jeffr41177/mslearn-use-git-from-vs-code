@@ -38,9 +38,17 @@
 #     print ("a is less than b")
 
 # Space Debris Alert
+# object_size = 4
+# if object_size > 5:
+#     print("We need to keep an eye on this object because it is > 5 meters")
+# else:   
+#     print("Object poses no threat")
 
-object_size = 4
-if object_size > 5:
-    print("We need to keep an eye on this object because it is > 5 meters")
-else:   
-    print("Object poses no threat")
+# Use of AND operator
+object_size = 10
+proximity = 9000
+
+if object_size > 5 and proximity < 1000:
+    print('Evasive maneuvers are required!')
+else:
+    print('Object poses no threat.')
