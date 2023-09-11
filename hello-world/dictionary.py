@@ -19,8 +19,8 @@ print(planet['moons'])
 # wibble = planet.get('wibble')      # Returns None
 # print(wibble)
 
-wibble = planet['wibble']            # Throws KeyError
-print(wibble)
+# wibble = planet['wibble']            # Throws KeyError
+#print(wibble)
 
 # MODIFY DICTIONARY VALUES
 
@@ -36,3 +36,48 @@ planet.update({
 # THIS CAN ALSO BE USED TO MAKE MULTIPLE UPDATES TO THE DICTIONARY
 planet['name'] = 'Jupiter'
 planet['moons'] = 79
+
+# Add to the dictionary
+planet['orbital period'] = 4333
+
+# planet dictionary now contains: {
+#   name: 'jupiter'
+#   moons: 79
+#   orbital period: 4333
+# }
+
+print(planet['orbital period'])
+
+# To remove a dictionary key use .pop
+planet.pop('orbital period')
+
+# planet dictionary now contains: {
+#   name: 'jupiter'
+#   moons: 79
+# }
+
+# Add complex data types - including dictionary inside a dictionary
+# Add address
+planet['diameter (km)'] = {
+    'polar': 133709,
+    'equatorial': 142984
+}
+
+# planet dictionary now contains: {
+#   name: 'Jupiter'
+#   moons: 79
+#   diameter (km): {
+#      polar: 133709
+#      equatorial: 142984
+#   }
+# }
+
+
+# To RETRIEVE the "KEY" VALUES (name, diameter, polar) IN A NESTED DICTIONARY, you chain together square brackets, or calls to get.
+# Print using an f string which requires {} and is more efficient
+print('')
+print(f'The {planet["name"]} polar diameter is: {planet["diameter (km)"]["polar"]} km.')
+
+
+
+
