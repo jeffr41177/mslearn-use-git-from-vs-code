@@ -123,3 +123,5 @@ for sentence in sentences:
     #if sentence.find("temperature"):  # this does not work
     if "temperature" in sentence:
        print(sentence)
+
+       
